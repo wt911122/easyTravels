@@ -1,0 +1,54 @@
+.section{
+	width: 100%;
+	height:100%;
+	position: absolute;	
+	top: 0;
+	background-color: white;
+	display: none;
+	box-sizing: border-box;
+	border: 1px solid gray;
+	box-shadow: 0 0 20px #D7D7D7;
+	z-index: 1;
+}
+.section.leftToRightTrans{
+	left: -100%;
+	display: block;
+	z-index: 1;
+}
+.section.rightToLeftTrans{
+	left: 100%;
+	display: block;
+	z-index: 1;
+}
+.section.touchTrans{
+	display: block;
+	z-index: 1;
+}
+
+.section.show{
+	left: 0!important;
+	display: block;
+	z-index: -1;
+}
+.section > nav{
+	text-align: center;
+	font-size: 1em;
+	line-height: 3em;
+	background-image: -moz-linear-gradient(top, #fff, #D7D7D7); /* Firefox */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #D7D7D7)); /* Saf4+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#D7D7D7', GradientType='0'); /* IE*/
+}
+.section > nav > a.raction{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	width: 3em;
+}
+.section > nav > a.laction{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 3em;
+}

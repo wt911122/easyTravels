@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>index</title>
+		<link rel="stylesheet" type="text/css" href="JqueryPlugin/easyTravels.css">
+		<style type="text/css">
+			html, body, section, nav, article, h1, h2, h3, h4, h5, h6{
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			a{
+				text-decoration: none
+			}
+			section article h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<section id="secA">
+			<nav>
+				section A
+				<a href="#secB" class="raction" data-dir="right">&gt;</a>
+			</nav>
+			<article>
+				<h1>section A</h1>
+			</article>
+		</section>
+		<section id="secB">
+			<nav>
+				<a href="#secA" data-dir="left">&lt;</a>
+				section B
+				<a href="#secC" data-dir="right">&gt;</a>
+			</nav>
+			<article>
+				<h1>section B</h1>
+			</article>
+		</section>
+		<section id="secC">
+			<nav>
+				<a href="#secB" data-dir="left">&lt;</a>
+				section C
+				<a href="#secD" data-dir="right">&gt;</a>
+			</nav>
+			<article>
+				<h1>section C</h1>
+			</article>
+		</section>
+		<section id="secD">
+			<nav>
+				<a href="#secC" data-dir="left">&lt;</a>
+				section D
+				<a href="#secE" data-dir="right">&gt;</a>
+			</nav>
+			<article>
+				<h1>section D</h1>
+			</article>
+		</section>
+		<section id="secE">
+			<nav>
+				<a href="#secD" data-dir="left">&lt;</a>
+				section E
+			</nav>
+			<article>
+				<h1>section E</h1>
+			</article>
+		</section>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="JqueryPlugin/easyTravels.js"></script>
+	</body>
+</html>
