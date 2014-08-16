@@ -2,7 +2,7 @@
 	var Traveler = function(element, options){
 		this.$element 		= $(element)
 		this.options 		= options
-		this.windowSize 	= this.getWindowSize()
+		//this.windowSize 	= this.getWindowSize()
 
 		this.$element
 			.addClass('section')
@@ -20,15 +20,15 @@
 	Traveler.prototype.backAndForeByClick = function(e){
 		e.preventDefault();
 		var $ele = this,
-		 	dir = $(e.target).data("dir") === "left" ? "leftToRightTrans": "rightToLeftTrans";
+		 	dir = $(e.target).data("dir") === "left" ? "-100%": "100%";
 		
-		$(e.target.getAttribute("href")).addClass(dir).animate({
+		$(e.target.getAttribute("href")).css('left', dir).addClass("Trans").animate({
 			left:0
 		},{
-			duration: 500,
+			duration: 1000,
 			complete:function(){
 				$ele.removeClass('show');
-				$(this).removeClass(dir).css("left","none").addClass("show");
+				$(this).removeClass("Trans").addClass("show");
 			}
 		})			
 	}
@@ -55,7 +55,7 @@
 	                		left:leftStr
 	                	},{
 	                		complete:function(){
-	                			$that.removeClass('touchTrans');
+	                			$that.removeClass('Trans');
 	                		}
 	                	})
 	                }
@@ -71,7 +71,7 @@
 	                if (offset) {
 	                	var sectId = $that.find('a[data-dir="'+dir+'"]').attr('href')
 	                	if (sectId) {
-	                		$that.removeClass('show').addClass('touchTrans')
+	                		$that.removeClass('show').addClass('Trans')
 	                    	$('section'+sectId).addClass('show')
 	                    	$that.css('left', offset)
 	                	}	

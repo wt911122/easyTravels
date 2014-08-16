@@ -8,21 +8,10 @@
 	box-sizing: border-box;
 	border: 1px solid gray;
 	box-shadow: 0 0 20px #D7D7D7;
-	z-index: 1;
 }
-.section.leftToRightTrans{
-	left: -100%;
+.section.Trans{
 	display: block;
-	z-index: 1;
-}
-.section.rightToLeftTrans{
-	left: 100%;
-	display: block;
-	z-index: 1;
-}
-.section.touchTrans{
-	display: block;
-	z-index: 1;
+	z-index: 500;
 }
 
 .section.show{
